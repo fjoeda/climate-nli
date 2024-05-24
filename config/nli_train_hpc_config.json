@@ -1,0 +1,7 @@
+{
+    "batch_size": 16,
+    "learning_rate": 5e-5,
+    "patience": 5,
+    "num_epoch": 50,
+    "max_length": 512
+}
