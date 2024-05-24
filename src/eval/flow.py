@@ -21,7 +21,7 @@ def run_auto_label(
     templates=None
 ):
     autolabel_type_list = [
-        "bart-mnli",
+        "bart-large-mnli",
         "climate-nli-binary",
         "climate-nli-unseen-binary"
     ]
@@ -35,7 +35,7 @@ def run_auto_label(
     labels = [item.lower() for item in df_dataset[label_column].unique()]
     text_list = df_dataset[text_column].values
     
-    if autolabel_type == "bart-mnli":
+    if autolabel_type == "bart-large-mnli":
         model_path = "facebook/bart-large-mnli"
         model = BertNliClf(model_path=model_path, labels=labels, templates=templates)
     elif autolabel_type == "climate-nli-binary":
